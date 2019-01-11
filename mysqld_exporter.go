@@ -341,7 +341,9 @@ func main() {
 	}
 
 	// Setup extra params for the DSN, default to having a lock timeout.
-	dsnParams := []string{fmt.Sprintf(timeoutParam, *exporterLockTimeout)}
+	//dsnParams := []string{fmt.Sprintf(timeoutParam, *exporterLockTimeout)}
+	var dsnParams []string
+
 	if *exporterLogSlowFilter {
 		dsnParams = append(dsnParams, sessionSettingsParam)
 	}
